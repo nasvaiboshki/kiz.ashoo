@@ -22,44 +22,6 @@
     font-display: swap
 }
 
-.messenger-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-}
-
-.messenger-modal.active {
-  display: block;
-}
-
-.mfp-bg {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-.mfp-wrap {
-  position: fixed;
-  inset: 0;
-  overflow-y: auto;
-}
-
-.mfp-content {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-}
-
-.mfp-close {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 
 html {
     line-height: 1.15;
@@ -585,210 +547,210 @@ blockquote {
 }
 
 .icon-add {
-    background: url("../images/sprite.svg?v1725041088975") 84.5360824742% 67.0731707317% no-repeat;
+    background: url("../images/sprite.svg") 84.5360824742% 67.0731707317% no-repeat;
     width: 21px;
     height: 21px;
     display: inline-block
 }
 
 .icon-arrow-down {
-    background: url("../images/sprite.svg?v1725041088975") 46.7980295567% 36.1581920904% no-repeat;
+    background: url("../images/sprite.svg") 46.7980295567% 36.1581920904% no-repeat;
     width: 12px;
     height: 8px;
     display: inline-block
 }
 
 .icon-arrow-down-black {
-    background: url("../images/sprite.svg?v1725041088975") 31.5270935961% 36.1581920904% no-repeat;
+    background: url("../images/sprite.svg") 31.5270935961% 36.1581920904% no-repeat;
     width: 12px;
     height: 8px;
     display: inline-block
 }
 
 .icon-arrow-right-black {
-    background: url("../images/sprite.svg?v1725041088975") 89.8550724638% 10.4046242775% no-repeat;
+    background: url("../images/sprite.svg") 89.8550724638% 10.4046242775% no-repeat;
     width: 8px;
     height: 12px;
     display: inline-block
 }
 
 .icon-char-remove {
-    background: url("../images/sprite.svg?v1725041088975") 0 28.7581699346% no-repeat;
+    background: url("../images/sprite.svg") 0 28.7581699346% no-repeat;
     width: 32px;
     height: 32px;
     display: inline-block
 }
 
 .icon-chat {
-    background: url("../images/sprite.svg?v1725041088975") 0 65.8385093168% no-repeat;
+    background: url("../images/sprite.svg") 0 65.8385093168% no-repeat;
     width: 24px;
     height: 24px;
     display: inline-block
 }
 
 .icon-chat-back {
-    background: url("../images/sprite.svg?v1725041088975") 96.568627451% 21.4285714286% no-repeat;
+    background: url("../images/sprite.svg") 96.568627451% 21.4285714286% no-repeat;
     width: 11px;
     height: 17px;
     display: inline-block
 }
 
 .icon-chat-back-big {
-    background: url("../images/sprite.svg?v1725041088975") 91.1764705882% 0 no-repeat;
+    background: url("../images/sprite.svg") 91.1764705882% 0 no-repeat;
     width: 11px;
     height: 18px;
     display: inline-block
 }
 
 .icon-chat-ban {
-    background: url("../images/sprite.svg?v1725041088975") 17.4863387978% 28.7581699346% no-repeat;
+    background: url("../images/sprite.svg") 17.4863387978% 28.7581699346% no-repeat;
     width: 32px;
     height: 32px;
     display: inline-block
 }
 
 .icon-chat-check {
-    background: url("../images/sprite.svg?v1725041088975") 12.5654450262% 62.3529411765% no-repeat;
+    background: url("../images/sprite.svg") 12.5654450262% 62.3529411765% no-repeat;
     width: 24px;
     height: 15px;
     display: inline-block
 }
 
 .icon-chat-drop {
-    background: url("../images/sprite.svg?v1725041088975") 40.39408867% 60.2272727273% no-repeat;
+    background: url("../images/sprite.svg") 40.39408867% 60.2272727273% no-repeat;
     width: 12px;
     height: 9px;
     display: inline-block
 }
 
 .icon-chat-question {
-    background: url("../images/sprite.svg?v1725041088975") 44.8087431694% 0 no-repeat;
+    background: url("../images/sprite.svg") 44.8087431694% 0 no-repeat;
     width: 32px;
     height: 32px;
     display: inline-block
 }
 
 .icon-chat-send {
-    background: url("../images/sprite.svg?v1725041088975") 60.6382978723% 0 no-repeat;
+    background: url("../images/sprite.svg") 60.6382978723% 0 no-repeat;
     width: 27px;
     height: 27px;
     display: inline-block
 }
 
 .icon-chat-warn {
-    background: url("../images/sprite.svg?v1725041088975") 44.8087431694% 20.9150326797% no-repeat;
+    background: url("../images/sprite.svg") 44.8087431694% 20.9150326797% no-repeat;
     width: 32px;
     height: 32px;
     display: inline-block
 }
 
 .icon-check-green {
-    background: url("../images/sprite.svg?v1725041088975") 57.6530612245% 88.2352941176% no-repeat;
+    background: url("../images/sprite.svg") 57.6530612245% 88.2352941176% no-repeat;
     width: 19px;
     height: 15px;
     display: inline-block
 }
 
 .icon-check-item {
-    background: url("../images/sprite.svg?v1725041088975") 67.3469387755% 88.2352941176% no-repeat;
+    background: url("../images/sprite.svg") 67.3469387755% 88.2352941176% no-repeat;
     width: 19px;
     height: 15px;
     display: inline-block
 }
 
 .icon-check-white {
-    background: url("../images/sprite.svg?v1725041088975") 77.0408163265% 88.2352941176% no-repeat;
+    background: url("../images/sprite.svg") 77.0408163265% 88.2352941176% no-repeat;
     width: 19px;
     height: 15px;
     display: inline-block
 }
 
 .icon-checkbox {
-    background: url("../images/sprite.svg?v1725041088975") 40.5940594059% 36.7816091954% no-repeat;
+    background: url("../images/sprite.svg") 40.5940594059% 36.7816091954% no-repeat;
     width: 13px;
     height: 11px;
     display: inline-block
 }
 
 .icon-checkbox-scheduler {
-    background: url("../images/sprite.svg?v1725041088975") 0 100% no-repeat;
+    background: url("../images/sprite.svg") 0 100% no-repeat;
     width: 19px;
     height: 15px;
     display: inline-block
 }
 
 .icon-close {
-    background: url("../images/sprite.svg?v1725041088975") 98.0099502488% 96.4912280702% no-repeat;
+    background: url("../images/sprite.svg") 98.0099502488% 96.4912280702% no-repeat;
     width: 14px;
     height: 14px;
     display: inline-block
 }
 
 .icon-close-black {
-    background: url("../images/sprite.svg?v1725041088975") 98.9949748744% 41.4201183432% no-repeat;
+    background: url("../images/sprite.svg") 98.9949748744% 41.4201183432% no-repeat;
     width: 16px;
     height: 16px;
     display: inline-block
 }
 
 .icon-close-blue {
-    background: url("../images/sprite.svg?v1725041088975") 98.9949748744% 50.8875739645% no-repeat;
+    background: url("../images/sprite.svg") 98.9949748744% 50.8875739645% no-repeat;
     width: 16px;
     height: 16px;
     display: inline-block
 }
 
 .icon-close-red {
-    background: url("../images/sprite.svg?v1725041088975") 98.9949748744% 60.3550295858% no-repeat;
+    background: url("../images/sprite.svg") 98.9949748744% 60.3550295858% no-repeat;
     width: 16px;
     height: 16px;
     display: inline-block
 }
 
 .icon-close-white {
-    background: url("../images/sprite.svg?v1725041088975") 98.9949748744% 69.8224852071% no-repeat;
+    background: url("../images/sprite.svg") 98.9949748744% 69.8224852071% no-repeat;
     width: 16px;
     height: 16px;
     display: inline-block
 }
 
 .icon-copy {
-    background: url("../images/sprite.svg?v1725041088975") 24.8587570621% 0 no-repeat;
+    background: url("../images/sprite.svg") 24.8587570621% 0 no-repeat;
     width: 38px;
     height: 38px;
     display: inline-block
 }
 
 .icon-edit {
-    background: url("../images/sprite.svg?v1725041088975") 100% 0 no-repeat;
+    background: url("../images/sprite.svg") 100% 0 no-repeat;
     width: 18px;
     height: 18px;
     display: inline-block
 }
 
 .icon-geolocation {
-    background: url("../images/sprite.svg?v1725041088975") 55.8974358974% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 55.8974358974% 78.7878787879% no-repeat;
     width: 20px;
     height: 20px;
     display: inline-block
 }
 
 .icon-geolocation-black {
-    background: url("../images/sprite.svg?v1725041088975") 66.1538461538% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 66.1538461538% 78.7878787879% no-repeat;
     width: 20px;
     height: 20px;
     display: inline-block
 }
 
 .icon-health {
-    background: url("../images/sprite.svg?v1725041088975") 98.0099502488% 31.5476190476% no-repeat;
+    background: url("../images/sprite.svg") 98.0099502488% 31.5476190476% no-repeat;
     width: 14px;
     height: 17px;
     display: inline-block
 }
 
 .icon-health-big {
-    background: url("../images/sprite.svg?v1725041088975") 60.3174603175% 16.9811320755% no-repeat;
+    background: url("../images/sprite.svg") 60.3174603175% 16.9811320755% no-repeat;
     width: 26px;
     height: 26px;
     display: inline-block
@@ -809,259 +771,259 @@ blockquote {
 }
 
 .icon-heart-black {
-    background: url("../images/sprite.svg?v1725041088975") 0 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 0 78.7878787879% no-repeat;
     width: 22px;
     height: 20px;
     display: inline-block
 }
 
 .icon-heart-button {
-    background: url("../images/sprite.svg?v1725041088975") 11.3989637306% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 11.3989637306% 78.7878787879% no-repeat;
     width: 22px;
     height: 20px;
     display: inline-block
 }
 
 .icon-heart-button-fill {
-    background: url("../images/sprite.svg?v1725041088975") 22.7979274611% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 22.7979274611% 78.7878787879% no-repeat;
     width: 22px;
     height: 20px;
     display: inline-block
 }
 
 .icon-heart-white {
-    background: url("../images/sprite.svg?v1725041088975") 34.1968911917% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 34.1968911917% 78.7878787879% no-repeat;
     width: 22px;
     height: 20px;
     display: inline-block
 }
 
 .icon-image-add {
-    background: url("../images/sprite.svg?v1725041088975") 45.3608247423% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 45.3608247423% 78.7878787879% no-repeat;
     width: 21px;
     height: 20px;
     display: inline-block
 }
 
 .icon-image-remove {
-    background: url("../images/sprite.svg?v1725041088975") 98.9949748744% 79.2899408284% no-repeat;
+    background: url("../images/sprite.svg") 98.9949748744% 79.2899408284% no-repeat;
     width: 16px;
     height: 16px;
     display: inline-block
 }
 
 .icon-info {
-    background: url("../images/sprite.svg?v1725041088975") 33.8308457711% 61.9883040936% no-repeat;
+    background: url("../images/sprite.svg") 33.8308457711% 61.9883040936% no-repeat;
     width: 14px;
     height: 14px;
     display: inline-block
 }
 
 .icon-item-next {
-    background: url("../images/sprite.svg?v1725041088975") 84.1025641026% 76.6081871345% no-repeat;
+    background: url("../images/sprite.svg") 84.1025641026% 76.6081871345% no-repeat;
     width: 20px;
     height: 14px;
     display: inline-block
 }
 
 .icon-item-prev {
-    background: url("../images/sprite.svg?v1725041088975") 24.6153846154% 61.9883040936% no-repeat;
+    background: url("../images/sprite.svg") 24.6153846154% 61.9883040936% no-repeat;
     width: 20px;
     height: 14px;
     display: inline-block
 }
 
 .icon-login-black {
-    background: url("../images/sprite.svg?v1725041088975") 73.4375% 0 no-repeat;
+    background: url("../images/sprite.svg") 73.4375% 0 no-repeat;
     width: 23px;
     height: 20px;
     display: inline-block
 }
 
 .icon-login-white {
-    background: url("../images/sprite.svg?v1725041088975") 73.4375% 12.1212121212% no-repeat;
+    background: url("../images/sprite.svg") 73.4375% 12.1212121212% no-repeat;
     width: 23px;
     height: 20px;
     display: inline-block
 }
 
 .icon-map-black {
-    background: url("../images/sprite.svg?v1725041088975") 0 90.9090909091% no-repeat;
+    background: url("../images/sprite.svg") 0 90.9090909091% no-repeat;
     width: 19px;
     height: 20px;
     display: inline-block
 }
 
 .icon-map-red {
-    background: url("../images/sprite.svg?v1725041088975") 9.693877551% 90.9090909091% no-repeat;
+    background: url("../images/sprite.svg") 9.693877551% 90.9090909091% no-repeat;
     width: 19px;
     height: 20px;
     display: inline-block
 }
 
 .icon-map-white {
-    background: url("../images/sprite.svg?v1725041088975") 19.387755102% 90.9090909091% no-repeat;
+    background: url("../images/sprite.svg") 19.387755102% 90.9090909091% no-repeat;
     width: 19px;
     height: 20px;
     display: inline-block
 }
 
 .icon-metro {
-    background: url("../images/sprite.svg?v1725041088975") 84.9740932642% 0 no-repeat;
+    background: url("../images/sprite.svg") 84.9740932642% 0 no-repeat;
     width: 22px;
     height: 22px;
     display: inline-block
 }
 
 .icon-metro-dark {
-    background: url("../images/sprite.svg?v1725041088975") 84.9740932642% 13.4969325153% no-repeat;
+    background: url("../images/sprite.svg") 84.9740932642% 13.4969325153% no-repeat;
     width: 22px;
     height: 22px;
     display: inline-block
 }
 
 .icon-phone-dark {
-    background: url("../images/sprite.svg?v1725041088975") 31.8407960199% 26.6666666667% no-repeat;
+    background: url("../images/sprite.svg") 31.8407960199% 26.6666666667% no-repeat;
     width: 14px;
     height: 20px;
     display: inline-block
 }
 
 .icon-phone-white {
-    background: url("../images/sprite.svg?v1725041088975") 74.1293532338% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 74.1293532338% 78.7878787879% no-repeat;
     width: 14px;
     height: 20px;
     display: inline-block
 }
 
 .icon-pill {
-    background: url("../images/sprite.svg?v1725041088975") 0 49.0322580645% no-repeat;
+    background: url("../images/sprite.svg") 0 49.0322580645% no-repeat;
     width: 26px;
     height: 30px;
     display: inline-block
 }
 
 .icon-remove {
-    background: url("../images/sprite.svg?v1725041088975") 73.4375% 24.6913580247% no-repeat;
+    background: url("../images/sprite.svg") 73.4375% 24.6913580247% no-repeat;
     width: 23px;
     height: 23px;
     display: inline-block
 }
 
 .icon-remove-blue {
-    background: url("../images/sprite.svg?v1725041088975") 73.4375% 38.8888888889% no-repeat;
+    background: url("../images/sprite.svg") 73.4375% 38.8888888889% no-repeat;
     width: 23px;
     height: 23px;
     display: inline-block
 }
 
 .icon-search-red {
-    background: url("../images/sprite.svg?v1725041088975") 29.0816326531% 90.9090909091% no-repeat;
+    background: url("../images/sprite.svg") 29.0816326531% 90.9090909091% no-repeat;
     width: 19px;
     height: 20px;
     display: inline-block
 }
 
 .icon-search-white {
-    background: url("../images/sprite.svg?v1725041088975") 38.7755102041% 90.9090909091% no-repeat;
+    background: url("../images/sprite.svg") 38.7755102041% 90.9090909091% no-repeat;
     width: 19px;
     height: 20px;
     display: inline-block
 }
 
 .icon-star {
-    background: url("../images/sprite.svg?v1725041088975") 98.9949748744% 88.2352941176% no-repeat;
+    background: url("../images/sprite.svg") 98.9949748744% 88.2352941176% no-repeat;
     width: 16px;
     height: 15px;
     display: inline-block
 }
 
 .icon-star-border {
-    background: url("../images/sprite.svg?v1725041088975") 14.0540540541% 49.0322580645% no-repeat;
+    background: url("../images/sprite.svg") 14.0540540541% 49.0322580645% no-repeat;
     width: 30px;
     height: 30px;
     display: inline-block
 }
 
 .icon-star-fill {
-    background: url("../images/sprite.svg?v1725041088975") 30.2702702703% 49.0322580645% no-repeat;
+    background: url("../images/sprite.svg") 30.2702702703% 49.0322580645% no-repeat;
     width: 30px;
     height: 30px;
     display: inline-block
 }
 
 .icon-telegram {
-    background: url("../images/sprite.svg?v1725041088975") 60.3174603175% 33.3333333333% no-repeat;
+    background: url("../images/sprite.svg") 60.3174603175% 33.3333333333% no-repeat;
     width: 26px;
     height: 26px;
     display: inline-block
 }
 
 .icon-telegram-blue {
-    background: url("../images/sprite.svg?v1725041088975") 73.4375% 52.1212121212% no-repeat;
+    background: url("../images/sprite.svg") 73.4375% 52.1212121212% no-repeat;
     width: 23px;
     height: 20px;
     display: inline-block
 }
 
 .icon-telegram-white {
-    background: url("../images/sprite.svg?v1725041088975") 73.4375% 64.2424242424% no-repeat;
+    background: url("../images/sprite.svg") 73.4375% 64.2424242424% no-repeat;
     width: 23px;
     height: 20px;
     display: inline-block
 }
 
 .icon-timer-red {
-    background: url("../images/sprite.svg?v1725041088975") 84.9740932642% 26.9938650307% no-repeat;
+    background: url("../images/sprite.svg") 84.9740932642% 26.9938650307% no-repeat;
     width: 22px;
     height: 22px;
     display: inline-block
 }
 
 .icon-twitter {
-    background: url("../images/sprite.svg?v1725041088975") 60.3174603175% 49.6855345912% no-repeat;
+    background: url("../images/sprite.svg") 60.3174603175% 49.6855345912% no-repeat;
     width: 26px;
     height: 26px;
     display: inline-block
 }
 
 .icon-up {
-    background: url("../images/sprite.svg?v1725041088975") 0 0 no-repeat;
+    background: url("../images/sprite.svg") 0 0 no-repeat;
     width: 44px;
     height: 44px;
     display: inline-block
 }
 
 .icon-user {
-    background: url("../images/sprite.svg?v1725041088975") 48.2233502538% 90.9090909091% no-repeat;
+    background: url("../images/sprite.svg") 48.2233502538% 90.9090909091% no-repeat;
     width: 18px;
     height: 20px;
     display: inline-block
 }
 
 .icon-viber-blue {
-    background: url("../images/sprite.svg?v1725041088975") 45.7446808511% 48.4076433121% no-repeat;
+    background: url("../images/sprite.svg") 45.7446808511% 48.4076433121% no-repeat;
     width: 27px;
     height: 28px;
     display: inline-block
 }
 
 .icon-video-blue {
-    background: url("../images/sprite.svg?v1725041088975") 100% 10.7784431138% no-repeat;
+    background: url("../images/sprite.svg") 100% 10.7784431138% no-repeat;
     width: 18px;
     height: 18px;
     display: inline-block
 }
 
 .icon-whatsapp-blue {
-    background: url("../images/sprite.svg?v1725041088975") 84.9740932642% 40.490797546% no-repeat;
+    background: url("../images/sprite.svg") 84.9740932642% 40.490797546% no-repeat;
     width: 22px;
     height: 22px;
     display: inline-block
 }
 
 .icon-whatsapp-white {
-    background: url("../images/sprite.svg?v1725041088975") 84.9740932642% 53.9877300613% no-repeat;
+    background: url("../images/sprite.svg") 84.9740932642% 53.9877300613% no-repeat;
     width: 22px;
     height: 22px;
     display: inline-block
@@ -1078,7 +1040,7 @@ blockquote {
     width: 135px;
     height: 80px;
     display: inline-block;
-    background: url("../images/icon-verified-desktop.svg?v=3") no-repeat
+    background: url("../images/icon-verified-desktop.svg") no-repeat
 }
 
 .icon-verified-mobile {
@@ -1323,7 +1285,7 @@ label.checkbox-style>span:after,
     -webkit-transition: opacity .3s ease;
     transition: opacity .3s ease;
     opacity: 0;
-    background: url("../images/sprite.svg?v1725041088975") 40.5940594059% 36.7816091954% no-repeat;
+    background: url("../images/sprite.svg") 40.5940594059% 36.7816091954% no-repeat;
     width: 13px;
     height: 11px;
     display: inline-block
@@ -3238,7 +3200,6 @@ screen and (max-height: 300px) {
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
     transform: scale(0.8);
-    opacity: 0
 }
 
 .modal-animation.mfp-ready .mfp-arrow,
@@ -3258,12 +3219,12 @@ screen and (max-height: 300px) {
     transform: scale(0.8);
     opacity: 0
 }
-
+/* 
 .modal-animation.mfp-bg {
     -webkit-transition: opacity .3s ease-out;
     transition: opacity .3s ease-out;
     opacity: 0
-}
+} */
 
 .modal-animation.mfp-ready.mfp-bg {
     opacity: .8
@@ -3831,7 +3792,7 @@ button.swiper-pagination-bullet {
 }
 
 .noUi-horizontal .noUi-handle {
-    background: url("../images/sprite.svg?v1725041088975") 0 49.0322580645% no-repeat;
+    background: url("../images/sprite.svg") 0 49.0322580645% no-repeat;
     width: 26px;
     height: 30px;
     display: inline-block;
@@ -4624,7 +4585,7 @@ button.swiper-pagination-bullet {
 }
 
 .fotorama__arr--prev:after {
-    background: url("../images/sprite.svg?v1725041088975") 24.6153846154% 61.9883040936% no-repeat;
+    background: url("../images/sprite.svg") 24.6153846154% 61.9883040936% no-repeat;
     width: 20px;
     height: 14px;
     display: inline-block
@@ -4635,7 +4596,7 @@ button.swiper-pagination-bullet {
 }
 
 .fotorama__arr--next:after {
-    background: url("../images/sprite.svg?v1725041088975") 84.1025641026% 76.6081871345% no-repeat;
+    background: url("../images/sprite.svg") 84.1025641026% 76.6081871345% no-repeat;
     width: 20px;
     height: 14px;
     display: inline-block
@@ -5112,7 +5073,7 @@ select.error+.select2-container--default .select2-selection--single {
     transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
     transition: transform .3s ease, -webkit-transform .3s ease;
-    background: url("../images/sprite.svg?v1725041088975") 31.5270935961% 36.1581920904% no-repeat;
+    background: url("../images/sprite.svg") 31.5270935961% 36.1581920904% no-repeat;
     width: 12px;
     height: 8px;
     display: inline-block
@@ -5392,7 +5353,7 @@ select.error+.select2-container--modern .select2-selection--single {
     -webkit-transform: translateY(-50%) rotate(0deg) scale(0.85);
     -ms-transform: translateY(-50%) rotate(0deg) scale(0.85);
     transform: translateY(-50%) rotate(0deg) scale(0.85);
-    background: url("../images/sprite.svg?v1725041088975") 31.5270935961% 36.1581920904% no-repeat;
+    background: url("../images/sprite.svg") 31.5270935961% 36.1581920904% no-repeat;
     width: 12px;
     height: 8px;
     display: inline-block
@@ -8180,7 +8141,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .modal-verified__list li::before {
     content: " ";
-    background: url("../images/sprite.svg?v1725041088975") 67.3469387755% 88.2352941176% no-repeat;
+    background: url("../images/sprite.svg") 67.3469387755% 88.2352941176% no-repeat;
     width: 19px;
     height: 15px;
     display: inline-block;
@@ -8394,7 +8355,7 @@ div.geolocation-box button.geolocation-box__subtitle:before {
     -ms-transform: translateY(-50%) rotate(180deg);
     transform: translateY(-50%) rotate(180deg);
     position: absolute;
-    background: url("../images/sprite.svg?v1725041088975") 89.8550724638% 10.4046242775% no-repeat;
+    background: url("../images/sprite.svg") 89.8550724638% 10.4046242775% no-repeat;
     width: 8px;
     height: 12px;
     display: inline-block
@@ -8515,7 +8476,7 @@ div.geolocation-box button.geolocation-box__subtitle:before {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        background: url("../images/sprite.svg?v1725041088975") 89.8550724638% 10.4046242775% no-repeat;
+        background: url("../images/sprite.svg") 89.8550724638% 10.4046242775% no-repeat;
         width: 8px;
         height: 12px;
         display: inline-block
@@ -11996,7 +11957,7 @@ screen and (min-width: 1081px)and (min-resolution: 1.3dppx) {
 }
 
 #b_scroller span {
-    background: url("../images/sprite.svg?v1725041088975") 0 0 no-repeat;
+    background: url("../images/sprite.svg") 0 0 no-repeat;
     width: 44px;
     height: 44px;
     display: inline-block
@@ -12434,7 +12395,7 @@ screen and (min-width: 1081px)and (min-resolution: 1.3dppx) {
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
-    background: url("../images/sprite.svg?v1725041088975") 89.8550724638% 10.4046242775% no-repeat;
+    background: url("../images/sprite.svg") 89.8550724638% 10.4046242775% no-repeat;
     width: 8px;
     height: 12px;
     display: inline-block
@@ -12609,7 +12570,7 @@ screen and (min-width: 1081px)and (min-resolution: 1.3dppx) {
         -webkit-transform: translateY(-50%) rotate(-90deg);
         -ms-transform: translateY(-50%) rotate(-90deg);
         transform: translateY(-50%) rotate(-90deg);
-        background: url("../images/sprite.svg?v1725041088975") 31.5270935961% 36.1581920904% no-repeat;
+        background: url("../images/sprite.svg") 31.5270935961% 36.1581920904% no-repeat;
         width: 12px;
         height: 8px;
         display: inline-block
@@ -12662,7 +12623,7 @@ screen and (min-width: 1081px)and (min-resolution: 1.3dppx) {
         transition: -webkit-transform .3s ease;
         transition: transform .3s ease;
         transition: transform .3s ease, -webkit-transform .3s ease;
-        background: url("../images/sprite.svg?v1725041088975") 31.5270935961% 36.1581920904% no-repeat;
+        background: url("../images/sprite.svg") 31.5270935961% 36.1581920904% no-repeat;
         width: 12px;
         height: 8px;
         display: inline-block;
@@ -13524,7 +13485,7 @@ body.is-ios .chat-section__message {
 .chat-section-header__title:after {
     content: "";
     position: absolute;
-    background: url("../images/sprite.svg?v1725041088975") 40.39408867% 60.2272727273% no-repeat;
+    background: url("../images/sprite.svg") 40.39408867% 60.2272727273% no-repeat;
     width: 12px;
     height: 9px;
     display: inline-block;
@@ -13943,7 +13904,7 @@ body.is-ios .chat-section__message {
     position: absolute;
     right: 1px;
     top: 2px;
-    background: url("../images/sprite.svg?v1725041088975") 24.8587570621% 0 no-repeat;
+    background: url("../images/sprite.svg") 24.8587570621% 0 no-repeat;
     width: 38px;
     height: 38px;
     display: inline-block;
@@ -14060,7 +14021,7 @@ div.metro-box button.metro-box__subtitle:before {
     -ms-transform: translateY(-50%) rotate(180deg);
     transform: translateY(-50%) rotate(180deg);
     position: absolute;
-    background: url("../images/sprite.svg?v1725041088975") 89.8550724638% 10.4046242775% no-repeat;
+    background: url("../images/sprite.svg") 89.8550724638% 10.4046242775% no-repeat;
     width: 8px;
     height: 12px;
     display: inline-block
@@ -14187,7 +14148,7 @@ div.metro-box button.metro-box__subtitle:before {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        background: url("../images/sprite.svg?v1725041088975") 89.8550724638% 10.4046242775% no-repeat;
+        background: url("../images/sprite.svg") 89.8550724638% 10.4046242775% no-repeat;
         width: 8px;
         height: 12px;
         display: inline-block
@@ -14210,7 +14171,7 @@ div.metro-box button.metro-box__subtitle:before {
         -webkit-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg);
-        background: url("../images/sprite.svg?v1725041088975") 89.8550724638% 10.4046242775% no-repeat;
+        background: url("../images/sprite.svg") 89.8550724638% 10.4046242775% no-repeat;
         width: 8px;
         height: 12px;
         display: inline-block
@@ -14825,7 +14786,7 @@ div.metro-box button.metro-box__subtitle:before {
 
 .item-header__fav i:before {
     opacity: 1;
-    background: url("../images/sprite.svg?v1725041088975") 11.3989637306% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 11.3989637306% 78.7878787879% no-repeat;
     width: 22px;
     height: 20px;
     display: inline-block
@@ -14833,7 +14794,7 @@ div.metro-box button.metro-box__subtitle:before {
 
 .item-header__fav i:after {
     opacity: 0;
-    background: url("../images/sprite.svg?v1725041088975") 22.7979274611% 78.7878787879% no-repeat;
+    background: url("../images/sprite.svg") 22.7979274611% 78.7878787879% no-repeat;
     width: 22px;
     height: 20px;
     display: inline-block
@@ -15313,7 +15274,7 @@ div.metro-box button.metro-box__subtitle:before {
     position: absolute;
     left: 6px;
     top: 2px;
-    background: url("../images/sprite.svg?v1725041088975") 67.3469387755% 88.2352941176% no-repeat;
+    background: url("../images/sprite.svg") 67.3469387755% 88.2352941176% no-repeat;
     width: 19px;
     height: 15px;
     display: inline-block
@@ -19608,7 +19569,7 @@ div.metro-box button.metro-box__subtitle:before {
 }
 
 .form-blacklist__rating label i {
-    background: url("../images/sprite.svg?v1725041088975") 14.0540540541% 49.0322580645% no-repeat;
+    background: url("../images/sprite.svg") 14.0540540541% 49.0322580645% no-repeat;
     width: 30px;
     height: 30px;
     display: inline-block
@@ -19618,7 +19579,7 @@ div.metro-box button.metro-box__subtitle:before {
 .form-blacklist__rating label:focus i,
 .form-blacklist__rating label:hover~label i,
 .form-blacklist__rating label:focus~label i {
-    background: url("../images/sprite.svg?v1725041088975") 30.2702702703% 49.0322580645% no-repeat;
+    background: url("../images/sprite.svg") 30.2702702703% 49.0322580645% no-repeat;
     width: 30px;
     height: 30px;
     display: inline-block
@@ -19630,7 +19591,7 @@ div.metro-box button.metro-box__subtitle:before {
 }
 
 .form-blacklist__rating input[type=radio]:checked~label i {
-    background: url("../images/sprite.svg?v1725041088975") 30.2702702703% 49.0322580645% no-repeat;
+    background: url("../images/sprite.svg") 30.2702702703% 49.0322580645% no-repeat;
     width: 30px;
     height: 30px;
     display: inline-block
@@ -20664,7 +20625,7 @@ div.metro-box button.metro-box__subtitle:before {
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
-    background: url("../images/sprite.svg?v1725041088975") 89.8550724638% 10.4046242775% no-repeat;
+    background: url("../images/sprite.svg") 89.8550724638% 10.4046242775% no-repeat;
     width: 8px;
     height: 12px;
     display: inline-block
@@ -20845,7 +20806,7 @@ div.metro-box button.metro-box__subtitle:before {
     transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
     transition: transform .3s ease, -webkit-transform .3s ease;
-    background: url("../images/sprite.svg?v1725041088975") 31.5270935961% 36.1581920904% no-repeat;
+    background: url("../images/sprite.svg") 31.5270935961% 36.1581920904% no-repeat;
     width: 12px;
     height: 8px;
     display: inline-block;
@@ -20989,7 +20950,7 @@ div.metro-box button.metro-box__subtitle:before {
     transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
     transition: transform .3s ease, -webkit-transform .3s ease;
-    background: url("../images/sprite.svg?v1725041088975") 31.5270935961% 36.1581920904% no-repeat;
+    background: url("../images/sprite.svg") 31.5270935961% 36.1581920904% no-repeat;
     width: 12px;
     height: 8px;
     display: inline-block;
@@ -21115,6 +21076,86 @@ div.metro-box button.metro-box__subtitle:before {
     .inslider-item.swiper-slide {
         width: 12.5%
     }
+}
+
+.messenger-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.messenger-modal.active {
+  display: block;
+}
+
+/* .mfp-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+} */
+
+.mfp-wrap {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+}
+
+.mfp-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.mfp-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prepay-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+}
+
+.prepay-modal.active {
+  display: block;
+}
+
+/* фон */
+.prepay-modal::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+}
+
+/* центрирование */
+.prepay-modal .mfp-wrap {
+  position: fixed;
+  inset: 0;
+  overflow: auto;
+}
+
+.prepay-modal .mfp-container {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 16px;
+}
+
+/* сам модальный блок */
+.modal-prepay {
+  background: #fff;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=map/app.css.map */

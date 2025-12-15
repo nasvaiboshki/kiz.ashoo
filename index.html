@@ -6564,7 +6564,7 @@
 									</button>
 									<div class="item-contacts__messengers">
 										<button rel="nofollow noopener" data-id="1842"
-											class="b-btn b-btn--outline-blue js-show-tg item-contacts__item"
+											class="b-btn b-btn--outline-blue js-show-messenger item-contacts__item"
 											onclick=""
 											data-type="tg">
 											<i aria-hidden="true" class="icon-telegram-blue"></i>
@@ -6574,7 +6574,7 @@
 									
 									<!-- Алерт для тг контакта -->
 									<div id="messengers-dialog" class="messenger-modal">
-										<div class="mfp-bg modal-animation"></div>
+										<div class="mfp-bg modal-animation" styles="background:#426ed1;"></div>
 
 										<div class="mfp-wrap mfp-align-top mfp-auto-cursor modal-animation">
 											<div class="mfp-container mfp-inline-holder">
@@ -6585,7 +6585,7 @@
 												</button>
 
 												<div class="metro-box offcavas-metro-box messenger-dialog-box"
-													style="color:black; padding: 20px">
+													style="color:black; padding: 20px;display:flex;flex-direction:column;">
 
 												<div style="display:flex;flex-direction:column;gap:16px;align-items:center">
 													<div id="modal-title"
@@ -6613,8 +6613,84 @@
 											</div>
 										</div>
 									</div>
+									<div id="prepay-modal-wrapper" class="prepay-modal">
+										<div class="mfp-wrap mfp-auto-cursor mfp-ready" tabindex="-1" style="overflow: hidden auto;">
+											<div class="mfp-bg modal-animation" styles="background:#426ed1;"></div>
+											<div class="mfp-container mfp-s-ready mfp-inline-holder">
+												<div class="mfp-content">
+													<div class="modal-box modal-prepay" id="modal-prepay">
+														<button type="button" data-close-modal="" class="mfp-close modal-info__later" data-expires="0.05">
+															×
+														</button>
+														<div class="d-flex d-flex__aj_c d-flex__fd_col">
+															<div class="modal-prepay_main-text" style="width: 90%; margin: 20px 0;">
+																<p class="fake-h4">Предоплата эскортнице – норма.</p>
+																<p>Если у девушки в анкете указан минимально допустимый размер предоплаты и верифицирована
+																	банковская карта,
+																	то можно смело переводить ей предоплату, мы выступаем гарантом.
+																</p>
+																<p>
+																	Если в анкете у девушки отсутствуют либо верифицированные банковские реквизиты,
+																	либо не указан минимальный размер предоплаты - мы не рекомендуем переводить ей предоплату и
+																	не предоставляем никаких гарантий.
+																</p>
+															</div>
+															<div class="modal-prepay_text-cover d-flex d-flex__aj_c"
+																style="background-color: #F4F4F4; width: calc(100% + 40px)">
+																<p class="d-flex d-flex__aj_c" style="width: calc(90% - 40px);margin: 12px 0">
+																	<span style="margin-right: 8px">
+																		<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+																			xmlns="http://www.w3.org/2000/svg">
+																			<path
+																				d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
+																				stroke="#4C8FF5" stroke-width="2" stroke-linecap="round"
+																				stroke-linejoin="round"></path>
+																			<path d="M15 15H16V22H17" stroke="#4C8FF5" stroke-width="2" stroke-linecap="round"
+																				stroke-linejoin="round"></path>
+																			<path
+																				d="M15.75 12C16.5784 12 17.25 11.3284 17.25 10.5C17.25 9.67157 16.5784 9 15.75 9C14.9216 9 14.25 9.67157 14.25 10.5C14.25 11.3284 14.9216 12 15.75 12Z"
+																				fill="#4C8FF5"></path>
+																		</svg>
+																	</span>
+																	<span class="modal_prepay_text">
+																		Данной девушке можно переводить предоплату в размере до <strong>7000</strong> рублей,
+																		банковские реквизиты <strong>верифицированы</strong> и заканчиваются на ***4342
+																	</span> </p>
+															</div>
 
+															<div data-close-modal="" class="modal-prepay_confirm b-btn b-btn--blue">
+																Понятно
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="mfp-preloader">Loading...</div>
+											</div>
+										</div>
+									</div>
 
+									<script>
+										const prepayModal = document.getElementById('prepay-modal-wrapper');
+										// открыть
+										document.addEventListener('DOMContentLoaded', () => {
+											document.querySelectorAll('.js-prepay-modal').forEach(btn => {
+												btn.addEventListener('click', () => {
+													prepayModal.classList.add('active');
+												});
+											});
+
+											// закрыть по крестику и кнопке "Понятно"
+											prepayModal.addEventListener('click', (e) => {
+												if (
+													e.target.hasAttribute('data-close-modal') ||
+													e.target.classList.contains('prepay-modal')
+												) {
+													prepayModal.classList.remove('active');
+												}
+											});
+										});
+
+									</script>
 									<script>
 										const modal = document.getElementById('messengers-dialog');
 										const link = document.getElementById('messenger-link');
@@ -6626,7 +6702,7 @@
 											tg: {
 											url: 'https://t.me/nonnachk',
 											text: 'Перейти в Telegram',
-											icon: '/themes/molvo/assets/images/telegram.svg'
+											icon: './images/telegram.svg'
 											},
 										};
 
@@ -6662,6 +6738,48 @@
 					</header>
 					<div class="item__panel ">
 						<div class="item__gallery">
+							<div class="item-prepay">
+								<style>
+									.item-prepay_container {
+										background: #f7f7f7;
+										border-radius: 10px;
+										margin-bottom: 20px;
+										text-align: center;
+										font-size: 14px;
+										cursor: default;
+										padding: 8px;
+									}
+
+									.item-prepay_icon {
+										margin-right: 8px;
+									}
+									.item-prepay_link {
+										margin-left: 20px;
+										color: #4C8FF5;
+										cursor: pointer;
+										text-decoration: underline;
+									}
+								</style>
+								<section class="item-prepay_container d-flex d-flex__aj_c d-flex__fd_row">
+									<div class="item-prepay_icon">
+										<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.5 11.75C13.6421 11.75 17 10.239 17 8.375C17 6.51104 13.6421 5 9.5 5C5.35786 5 2 6.51104 2 8.375C2 10.239 5.35786 11.75 9.5 11.75Z" stroke="#33C66E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M2 8.375V12.125C2 13.9906 5.35625 15.5 9.5 15.5C13.6438 15.5 17 13.9906 17 12.125V8.375" stroke="#33C66E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M6.5 11.4688V15.2188" stroke="#33C66E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M17 9.56567C20.4219 9.88442 23 11.2438 23 12.875C23 14.7407 19.6438 16.25 15.5 16.25C13.6625 16.25 11.975 15.9501 10.6719 15.4626" stroke="#33C66E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M8 15.4344V16.625C8 18.4906 11.3562 20 15.5 20C19.6438 20 23 18.4906 23 16.625V12.875" stroke="#33C66E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M18.5 15.9688V19.7188" stroke="#33C66E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M12.5 11.4688V19.7188" stroke="#33C66E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+									<div class="item-prepay_text">
+										Ознакомьтесь с информацией о предоплате
+									</div>
+									<div class="item-prepay_link js-prepay-modal">
+										Подробнее
+									</div>
+								</section>					
+							</div>
 							<style>
 								.fotorama1765665757239 .fotorama__nav--thumbs .fotorama__nav__frame {
 									padding: 10px;
@@ -7626,947 +7744,7 @@
 					</div>
 				</article>
 			</div>
-			<div class="item-grid__relative">
-				<section class="section section--list">
-					<div class="wrapper">
-						<h2 class="section__title">
-							Элитные проститутки рядом
-						</h2>
-						<div class="list-item " data-slider="item-list">
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<script type="application/ld+json">
-											null
-										</script>
-										<div class="list-item__item js-list-item  " data-id="10210">
-											<a href="https://vxm.ashoo.kim/10210-nina" class="list-item__image"
-												target="_self" rel="noopener" data-top="">
-
-												<img loading="lazy" width="140" height="210" alt="Нина❤️"
-													src="./Элитная проститутка Нонна, 22 года в городе Саратов - 1842_files/thumb_2032263_336_504_0_0_crop.webp">
-												<div class="list-item__icons">
-													<span>
-														<svg width="6" height="7" viewBox="0 0 6 7" fill="none"
-															xmlns="http://www.w3.org/2000/svg">
-															<path
-																d="M5.87915e-08 1.00149C6.92433e-08 0.23169 0.833333 -0.249433 1.5 0.135467L5.25 2.30053C5.91667 2.68543 5.91667 3.64768 5.25 4.03258L1.5 6.19765C0.833332 6.58255 -1.04518e-08 6.10142 0 5.33162L5.87915e-08 1.00149Z"
-																fill="white"></path>
-														</svg>
-													</span>
-													<span>
-														<svg width="6" height="7" viewBox="0 0 6 7" fill="none"
-															xmlns="http://www.w3.org/2000/svg">
-															<path
-																d="M5.4 0H0.6C0.2685 0 0.00300026 0.2685 0.00300026 0.6L0.00300953 7L3.00001 5H5.4C5.7315 5 6 4.7315 6 4.4V0.6C6 0.2685 5.7315 0 5.4 0Z"
-																fill="white"></path>
-														</svg>
-														<span>
-															5
-														</span>
-													</span>
-												</div>
-											</a>
-											<div class="list-item__desc">
-												<div class="list-item__row">
-													<strong>
-														Возраст:
-													</strong>
-													<span>
-														25
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Грудь:
-													</strong>
-													<span>
-														1
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Вес:
-													</strong>
-													<span>
-														55
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Рост:
-													</strong>
-													<span>
-														172
-													</span>
-												</div>
-												<div class="list-item__row list-item__row--full">
-													<span class="list-item__cut tags">
-														<a href="https://vxm.ashoo.kim/individualka/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled is-starred tag-6"
-															style="text-decoration: none; cursor: pointer;">
-															Индивидуалка
-														</a>
-														<a href="https://vxm.ashoo.kim/seks-analnyy/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Анальный секс
-														</a>
-														<a href="https://vxm.ashoo.kim/mbr/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															МБР
-														</a>
-														<a href="https://vxm.ashoo.kim/eskort/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Эскорт
-														</a>
-														<a href="https://vxm.ashoo.kim/kissing/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Целуюсь
-														</a>
-														<a href="https://vxm.ashoo.kim/apartments/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Апартаменты
-														</a>
-														<a href="https://vxm.ashoo.kim/vyezd/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Выезд
-														</a>
-														<a href="https://vxm.ashoo.kim/est-podruga/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Есть подруга
-														</a>
-														<a href="https://vxm.ashoo.kim/zhmzh/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															ЖМЖ
-														</a>
-														<a href="https://vxm.ashoo.kim/gfe/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															GFE
-														</a>
-														<a href="https://vxm.ashoo.kim/vysokie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Высокие
-														</a>
-														<a href="https://vxm.ashoo.kim/molodenkie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Молоденькие
-														</a>
-														<a href="https://vxm.ashoo.kim/mzhm/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															МЖМ
-														</a>
-														<a href="https://vxm.ashoo.kim/kruglosutochno/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Круглосуточно
-														</a>
-														<a href="https://vxm.ashoo.kim/virt/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Вирт
-														</a>
-														<a href="https://vxm.ashoo.kim/s-video/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															С видео
-														</a>
-														<a href="https://vxm.ashoo.kim/s-otzyvami/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															С отзывами
-														</a>
-														<a href="https://vxm.ashoo.kim/naturalnaya-grud/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Натуральная грудь
-														</a>
-													</span>
-												</div>
-											</div>
-											<div class="list-item__title">
-
-												<i class="icon-health" aria-hidden="true"></i>
-												<a href="https://vxm.ashoo.kim/10210-nina">Нина❤️</a>
-											</div>
-											<div class="list-item__address">
-												<div class="district">
-													<a href="https://vxm.ashoo.kim/saratov">
-														Саратов
-													</a>&nbsp;<a href="https://vxm.ashoo.kim/saratov/tverskoy">
-														р-н. Тверской
-													</a>
-													&nbsp;<a
-														href="https://vxm.ashoo.kim/elitnye/saratov/metro-belorusskaya"
-														class="metro-link-person">м. Белорусская</a>
-												</div>
-											</div>
-											<div class="list-item__buttons">
-												<button type="button"
-													class="b-btn b-btn--blue b-btn--small js-show-phone" data-id="10210"
-													onclick="">
-													<i class="icon-phone-white" aria-hidden="true"></i>
-													<span>Показать телефон</span>
-												</button>
-												<button data-id="10210"
-													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-tg"
-													onclick="">
-													<i class="icon-telegram-white" aria-hidden="true"></i>
-												</button>
-												<button data-id="10210" rel="nofollow noopener"
-													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-wa"
-													onclick="">
-													<i class="icon-whatsapp-white" aria-hidden="true"></i>
-												</button>
-											</div>
-
-											<div class="list-item__price-list">
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-alert-red d-flex__aj_c d-flex">1
-														</i>
-														<span class="list-item__price-time">час</span>
-													</span>
-													<span>40 000 ₽</span>
-												</div>
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-alert-red d-flex__aj_c d-flex">2
-														</i>
-														<span class="list-item__price-time">часа</span>
-													</span>
-													<span>60 000 ₽</span>
-												</div>
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-night-red d-flex__aj_c d-flex">
-														</i>
-														<span class="list-item__price-time">Ночь</span>
-													</span>
-													<span>200 000 ₽</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<script type="application/ld+json">
-											null
-										</script>
-										<div class="list-item__item js-list-item  " data-id="22160">
-											<a href="https://vxm.ashoo.kim/22160-sonechka-i-nastya"
-												class="list-item__image" target="_self" rel="noopener" data-top="">
-
-												<img loading="lazy" width="140" height="210" alt="Сонечка и Настя"
-													src="./Элитная проститутка Нонна, 22 года в городе Саратов - 1842_files/thumb_1826696_336_504_0_0_crop.webp">
-												<div class="list-item__icons">
-													<span>
-														<svg width="6" height="7" viewBox="0 0 6 7" fill="none"
-															xmlns="http://www.w3.org/2000/svg">
-															<path
-																d="M5.4 0H0.6C0.2685 0 0.00300026 0.2685 0.00300026 0.6L0.00300953 7L3.00001 5H5.4C5.7315 5 6 4.7315 6 4.4V0.6C6 0.2685 5.7315 0 5.4 0Z"
-																fill="white"></path>
-														</svg>
-														<span>
-															2
-														</span>
-													</span>
-												</div>
-											</a>
-											<div class="list-item__desc">
-												<div class="list-item__row">
-													<strong>
-														Возраст:
-													</strong>
-													<span>
-														19
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Грудь:
-													</strong>
-													<span>
-														3
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Вес:
-													</strong>
-													<span>
-														55
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Рост:
-													</strong>
-													<span>
-														172
-													</span>
-												</div>
-												<div class="list-item__row list-item__row--full">
-													<span class="list-item__cut tags">
-														<a href="https://vxm.ashoo.kim/individualka/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled is-starred tag-6"
-															style="text-decoration: none; cursor: pointer;">
-															Индивидуалка
-														</a>
-														<a href="https://vxm.ashoo.kim/seks-analnyy/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Анальный секс
-														</a>
-														<a href="https://vxm.ashoo.kim/mbr/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															МБР
-														</a>
-														<a href="https://vxm.ashoo.kim/eskort/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Эскорт
-														</a>
-														<a href="https://vxm.ashoo.kim/kissing/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Целуюсь
-														</a>
-														<a href="https://vxm.ashoo.kim/apartments/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Апартаменты
-														</a>
-														<a href="https://vxm.ashoo.kim/vyezd/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Выезд
-														</a>
-														<a href="https://vxm.ashoo.kim/sado-mazo/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled is-starred tag-15"
-															style="text-decoration: none; cursor: pointer;">
-															Садо-мазо
-														</a>
-														<a href="https://vxm.ashoo.kim/podrugi/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Подружки
-														</a>
-														<a href="https://vxm.ashoo.kim/zhmzh/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															ЖМЖ
-														</a>
-														<a href="https://vxm.ashoo.kim/gfe/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															GFE
-														</a>
-														<a href="https://vxm.ashoo.kim/blondinki/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Блондинки
-														</a>
-														<a href="https://vxm.ashoo.kim/bryunetki/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Брюнетки
-														</a>
-														<a href="https://vxm.ashoo.kim/vysokie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Высокие
-														</a>
-														<a href="https://vxm.ashoo.kim/molodenkie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Молоденькие
-														</a>
-														<a href="https://vxm.ashoo.kim/mzhm/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															МЖМ
-														</a>
-														<a href="https://vxm.ashoo.kim/kruglosutochno/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Круглосуточно
-														</a>
-														<a href="https://vxm.ashoo.kim/massazh-prostaty/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Массаж простаты
-														</a>
-														<a href="https://vxm.ashoo.kim/fut-fetish/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Фут-фетиш
-														</a>
-														<a href="https://vxm.ashoo.kim/virt/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Вирт
-														</a>
-														<a href="https://vxm.ashoo.kim/bez-trusov/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Без трусов
-														</a>
-														<a href="https://vxm.ashoo.kim/s-otzyvami/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															С отзывами
-														</a>
-														<a href="https://vxm.ashoo.kim/naturalnaya-grud/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Натуральная грудь
-														</a>
-													</span>
-												</div>
-											</div>
-											<div class="list-item__title">
-
-
-												<a href="https://vxm.ashoo.kim/22160-sonechka-i-nastya">Сонечка и
-													Настя</a>
-											</div>
-											<div class="list-item__address">
-												<div class="district">
-													<a href="https://vxm.ashoo.kim/saratov">
-														Саратов
-													</a>&nbsp;<a href="https://vxm.ashoo.kim/saratov/khamovniki">
-														р-н. Хамовники
-													</a>
-													&nbsp;<a
-														href="https://vxm.ashoo.kim/elitnye/saratov/metro-delovoy-tsentr"
-														class="metro-link-person">м. Деловой центр</a>
-												</div>
-											</div>
-											<div class="list-item__buttons">
-												<button type="button"
-													class="b-btn b-btn--blue b-btn--small js-show-phone" data-id="22160"
-													onclick="">
-													<i class="icon-phone-white" aria-hidden="true"></i>
-													<span>Показать телефон</span>
-												</button>
-												<button data-id="22160"
-													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-tg"
-													onclick="">
-													<i class="icon-telegram-white" aria-hidden="true"></i>
-												</button>
-												<button data-id="22160" rel="nofollow noopener"
-													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-wa"
-													onclick="">
-													<i class="icon-whatsapp-white" aria-hidden="true"></i>
-												</button>
-											</div>
-
-											<div class="list-item__price-list">
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-alert-red d-flex__aj_c d-flex">2
-														</i>
-														<span class="list-item__price-time">часа</span>
-													</span>
-													<span>600 000 ₽</span>
-												</div>
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-night-red d-flex__aj_c d-flex">
-														</i>
-														<span class="list-item__price-time">Ночь</span>
-													</span>
-													<span>700 000 ₽</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<script type="application/ld+json">
-											null
-										</script>
-										<div class="list-item__item js-list-item  " data-id="36277">
-											<a href="https://vxm.ashoo.kim/36277-melissa" class="list-item__image"
-												target="_self" rel="noopener" data-top="">
-
-												<img loading="lazy" width="140" height="210" alt="Melissa"
-													src="./Элитная проститутка Нонна, 22 года в городе Саратов - 1842_files/thumb_1994459_336_504_0_0_crop.webp">
-												<div class="list-item__icons">
-													<span>
-														<svg width="6" height="7" viewBox="0 0 6 7" fill="none"
-															xmlns="http://www.w3.org/2000/svg">
-															<path
-																d="M5.87915e-08 1.00149C6.92433e-08 0.23169 0.833333 -0.249433 1.5 0.135467L5.25 2.30053C5.91667 2.68543 5.91667 3.64768 5.25 4.03258L1.5 6.19765C0.833332 6.58255 -1.04518e-08 6.10142 0 5.33162L5.87915e-08 1.00149Z"
-																fill="white"></path>
-														</svg>
-													</span>
-												</div>
-											</a>
-											<div class="list-item__desc">
-												<div class="list-item__row">
-													<strong>
-														Возраст:
-													</strong>
-													<span>
-														19
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Грудь:
-													</strong>
-													<span>
-														2
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Вес:
-													</strong>
-													<span>
-														45
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Рост:
-													</strong>
-													<span>
-														165
-													</span>
-												</div>
-												<div class="list-item__row list-item__row--full">
-													<span class="list-item__cut tags">
-														<a href="https://vxm.ashoo.kim/Slave/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled is-starred tag-41"
-															style="text-decoration: none; cursor: pointer;">
-															Рабыня
-														</a>
-														<a href="https://vxm.ashoo.kim/individualka/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled is-starred tag-6"
-															style="text-decoration: none; cursor: pointer;">
-															Индивидуалка
-														</a>
-														<a href="https://vxm.ashoo.kim/seks-analnyy/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Анальный секс
-														</a>
-														<a href="https://vxm.ashoo.kim/mbr/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															МБР
-														</a>
-														<a href="https://vxm.ashoo.kim/eskort/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Эскорт
-														</a>
-														<a href="https://vxm.ashoo.kim/kissing/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Целуюсь
-														</a>
-														<a href="https://vxm.ashoo.kim/apartments/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Апартаменты
-														</a>
-														<a href="https://vxm.ashoo.kim/vyezd/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Выезд
-														</a>
-														<a href="https://vxm.ashoo.kim/est-podruga/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Есть подруга
-														</a>
-														<a href="https://vxm.ashoo.kim/zhmzh/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															ЖМЖ
-														</a>
-														<a href="https://vxm.ashoo.kim/gfe/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															GFE
-														</a>
-														<a href="https://vxm.ashoo.kim/nizkie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Низкие
-														</a>
-														<a href="https://vxm.ashoo.kim/molodenkie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Молоденькие
-														</a>
-														<a href="https://vxm.ashoo.kim/mzhm/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															МЖМ
-														</a>
-														<a href="https://vxm.ashoo.kim/has-selfie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															С селфи
-														</a>
-														<a href="https://vxm.ashoo.kim/kruglosutochno/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Круглосуточно
-														</a>
-														<a href="https://vxm.ashoo.kim/dvojnoe-proniknovenie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Двойное проникновение
-														</a>
-														<a href="https://vxm.ashoo.kim/fut-fetish/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Фут-фетиш
-														</a>
-														<a href="https://vxm.ashoo.kim/v-mini-yubke/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															В мини-юбке
-														</a>
-														<a href="https://vxm.ashoo.kim/v-ochkah/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															В очках
-														</a>
-														<a href="https://vxm.ashoo.kim/v-mashine/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															В машине
-														</a>
-														<a href="https://vxm.ashoo.kim/na-shpilkah/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															На шпильках
-														</a>
-														<a href="https://vxm.ashoo.kim/virt/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Вирт
-														</a>
-														<a href="https://vxm.ashoo.kim/v-chulkah/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															В чулках
-														</a>
-														<a href="https://vxm.ashoo.kim/bez-trusov/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Без трусов
-														</a>
-														<a href="https://vxm.ashoo.kim/s-video/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															С видео
-														</a>
-														<a href="https://vxm.ashoo.kim/s-otzyvami/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															С отзывами
-														</a>
-														<a href="https://vxm.ashoo.kim/naturalnaya-grud/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Натуральная грудь
-														</a>
-													</span>
-												</div>
-											</div>
-											<div class="list-item__title">
-
-												<i class="icon-health" aria-hidden="true"></i>
-												<a href="https://vxm.ashoo.kim/36277-melissa">Melissa</a>
-											</div>
-											<div class="list-item__address">
-												<div class="district">
-													<a href="https://vxm.ashoo.kim/saratov">
-														Саратов
-													</a>&nbsp;<a href="https://vxm.ashoo.kim/saratov/begovoy">
-														р-н. Беговой
-													</a>
-													&nbsp;<a
-														href="https://vxm.ashoo.kim/elitnye/saratov/metro-arbatskaya"
-														class="metro-link-person">м. Арбатская</a>
-												</div>
-											</div>
-											<div class="list-item__buttons">
-												<button type="button"
-													class="b-btn b-btn--blue b-btn--small js-show-phone" data-id="36277"
-													onclick="">
-													<i class="icon-phone-white" aria-hidden="true"></i>
-													<span>Показать телефон</span>
-												</button>
-												<button data-id="36277"
-													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-tg"
-													onclick="">
-													<i class="icon-telegram-white" aria-hidden="true"></i>
-												</button>
-												<button data-id="36277" rel="nofollow noopener"
-													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-wa"
-													onclick="">
-													<i class="icon-whatsapp-white" aria-hidden="true"></i>
-												</button>
-											</div>
-
-											<div class="list-item__price-list">
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-alert-red d-flex__aj_c d-flex">1
-														</i>
-														<span class="list-item__price-time">час</span>
-													</span>
-													<span>40 000 ₽</span>
-												</div>
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-alert-red d-flex__aj_c d-flex">2
-														</i>
-														<span class="list-item__price-time">часа</span>
-													</span>
-													<span>70 000 ₽</span>
-												</div>
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-night-red d-flex__aj_c d-flex">
-														</i>
-														<span class="list-item__price-time">Ночь</span>
-													</span>
-													<span>250 000 ₽</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<script type="application/ld+json">
-											null
-										</script>
-										<div class="list-item__item js-list-item  " data-id="47828">
-											<a href="https://vxm.ashoo.kim/47828-mira" class="list-item__image"
-												target="_self" rel="noopener" data-top="">
-
-												<img loading="lazy" width="140" height="210" alt="Мира"
-													src="./Элитная проститутка Нонна, 22 года в городе Саратов - 1842_files/thumb_1916905_336_504_0_0_crop.webp">
-												<div class="list-item__icons">
-													<span>
-														<svg width="6" height="7" viewBox="0 0 6 7" fill="none"
-															xmlns="http://www.w3.org/2000/svg">
-															<path
-																d="M5.4 0H0.6C0.2685 0 0.00300026 0.2685 0.00300026 0.6L0.00300953 7L3.00001 5H5.4C5.7315 5 6 4.7315 6 4.4V0.6C6 0.2685 5.7315 0 5.4 0Z"
-																fill="white"></path>
-														</svg>
-														<span>
-															3
-														</span>
-													</span>
-												</div>
-											</a>
-											<div class="list-item__desc">
-												<div class="list-item__row">
-													<strong>
-														Возраст:
-													</strong>
-													<span>
-														20
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Грудь:
-													</strong>
-													<span>
-														3
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Вес:
-													</strong>
-													<span>
-														58
-													</span>
-												</div>
-												<div class="list-item__row">
-													<strong>
-														Рост:
-													</strong>
-													<span>
-														169
-													</span>
-												</div>
-												<div class="list-item__row list-item__row--full">
-													<span class="list-item__cut tags">
-														<a href="https://vxm.ashoo.kim/menedzher/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled is-starred tag-23"
-															style="text-decoration: none; cursor: pointer;">
-															Менеджер
-														</a>
-														<a href="https://vxm.ashoo.kim/seks-analnyy/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Анальный секс
-														</a>
-														<a href="https://vxm.ashoo.kim/mbr/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															МБР
-														</a>
-														<a href="https://vxm.ashoo.kim/eskort/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Эскорт
-														</a>
-														<a href="https://vxm.ashoo.kim/kissing/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Целуюсь
-														</a>
-														<a href="https://vxm.ashoo.kim/apartments/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Апартаменты
-														</a>
-														<a href="https://vxm.ashoo.kim/vyezd/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Выезд
-														</a>
-														<a href="https://vxm.ashoo.kim/est-podruga/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Есть подруга
-														</a>
-														<a href="https://vxm.ashoo.kim/tatuirovka/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Татуировки
-														</a>
-														<a href="https://vxm.ashoo.kim/zhmzh/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															ЖМЖ
-														</a>
-														<a href="https://vxm.ashoo.kim/gfe/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															GFE
-														</a>
-														<a href="https://vxm.ashoo.kim/bryunetki/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Брюнетки
-														</a>
-														<a href="https://vxm.ashoo.kim/molodenkie/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Молоденькие
-														</a>
-														<a href="https://vxm.ashoo.kim/mzhm/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															МЖМ
-														</a>
-														<a href="https://vxm.ashoo.kim/s-otzyvami/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															С отзывами
-														</a>
-														<a href="https://vxm.ashoo.kim/naturalnaya-grud/saratov"
-															class="cut_tag b-btn--small b-btn--blue disabled "
-															style="text-decoration: none; cursor: pointer;">
-															Натуральная грудь
-														</a>
-													</span>
-												</div>
-											</div>
-											<div class="list-item__title">
-
-
-												<a href="https://vxm.ashoo.kim/47828-mira">Мира</a>
-											</div>
-											<div class="list-item__address">
-												<div class="district">
-													<a href="https://vxm.ashoo.kim/saratov">
-														Саратов
-													</a>&nbsp;<a href="https://vxm.ashoo.kim/saratov/begovoy">
-														р-н. Беговой
-													</a>
-													&nbsp;<a href="https://vxm.ashoo.kim/elitnye/saratov/metro-begovaya"
-														class="metro-link-person">м. Беговая</a>
-												</div>
-											</div>
-											<div class="list-item__buttons">
-												<button type="button"
-													class="b-btn b-btn--blue b-btn--small js-show-phone" data-id="47828"
-													onclick="">
-													<i class="icon-phone-white" aria-hidden="true"></i>
-													<span>Показать телефон</span>
-												</button>
-												<button data-id="47828"
-													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-tg"
-													onclick="">
-													<i class="icon-telegram-white" aria-hidden="true"></i>
-												</button>
-												<button data-id="47828" rel="nofollow noopener"
-													class="b-btn b-btn--blue b-btn--center b-btn--small js-show-wa"
-													onclick="">
-													<i class="icon-whatsapp-white" aria-hidden="true"></i>
-												</button>
-											</div>
-
-											<div class="list-item__price-list">
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-alert-red d-flex__aj_c d-flex">1
-														</i>
-														<span class="list-item__price-time">час</span>
-													</span>
-													<span>12 000 ₽</span>
-												</div>
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-alert-red d-flex__aj_c d-flex">2
-														</i>
-														<span class="list-item__price-time">часа</span>
-													</span>
-													<span>24 000 ₽</span>
-												</div>
-												<div class="list-item__price">
-													<span class="list-item__icon-price">
-														<i class="icon-night-red d-flex__aj_c d-flex">
-														</i>
-														<span class="list-item__price-time">Ночь</span>
-													</span>
-													<span>60 000 ₽</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
+			
 			<style>
 				.modal-prepay_confirm {
 					border-radius: 12px;
